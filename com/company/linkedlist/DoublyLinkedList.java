@@ -98,8 +98,8 @@ public class DoublyLinkedList{
                 head = null;
             else
                 tail.previous.next = null;
-            tail = tail.next;
-            current.next = null;
+            tail = tail.previous;
+            current.previous = null;
             length--;
         }
     }
