@@ -124,7 +124,7 @@ public class SinglyLinkedList{
         ListNode current = head;
         ListNode previous = null;
         ListNode next = null;
-        while(current.next != null){
+        while(current != null){
             next = current.next;
             current.next = previous;
             previous = current;
@@ -242,6 +242,32 @@ public class SinglyLinkedList{
             slowPtr = slowPtr.next;
         }
         slowPtr.next = null;
+    }
+
+    public boolean checkPalindrome(ListNode head){
+        if(head == null)
+            return true;
+
+        ListNode current = head;
+        ListNode previous = null;
+        ListNode next = null;
+        while(current != null){
+            next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+
+        ListNode p1 = head;
+        ListNode p2 = previous;
+
+        while(p1 != null){
+            if(p1.data != p2.data)
+                return false;
+            p1 = p1.next;
+            p2 = p2.next;
+        }
+        return true;
     }
 
     public ListNode removeNthFromEnd(ListNode head, int n) {
