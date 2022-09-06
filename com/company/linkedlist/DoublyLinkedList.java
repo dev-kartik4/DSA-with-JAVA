@@ -1,7 +1,6 @@
 package com.company.linkedlist;
 
 import java.util.NoSuchElementException;
-
 public class DoublyLinkedList{
 
     private static ListNode head;
@@ -9,13 +8,14 @@ public class DoublyLinkedList{
     private static int length;
 
     private class ListNode{
-
         private int data;
-        private ListNode previous;
         private ListNode next;
+        private ListNode previous;
 
         public ListNode(int data){
             this.data = data;
+            this.next = null;
+            this.previous = null;
         }
     }
 
@@ -33,8 +33,8 @@ public class DoublyLinkedList{
         return length;
     }
 
-    public void insertFirst(int value){
-        ListNode newNode = new ListNode(value);
+    public void insertFirst(int data){
+        ListNode newNode = new ListNode(data);
         if(isEmpty())
             tail = newNode;
         else
@@ -44,8 +44,8 @@ public class DoublyLinkedList{
         length++;
     }
 
-    public void insertLast(int value){
-        ListNode newNode = new ListNode(value);
+    public void insertLast(int data){
+        ListNode newNode = new ListNode(data);
         if(isEmpty())
             head = newNode;
         else{
@@ -93,7 +93,7 @@ public class DoublyLinkedList{
         if(isEmpty())
             throw new NoSuchElementException();
         else{
-            ListNode current = head;
+            ListNode current = tail;
             if(head == tail)
                 head = null;
             else
@@ -103,12 +103,22 @@ public class DoublyLinkedList{
             length--;
         }
     }
-
-    public static void main(String[] args) {
+    public static void main(String args[]){
         DoublyLinkedList dll = new DoublyLinkedList();
         dll.insertFirst(5);
         dll.insertFirst(4);
         dll.insertFirst(3);
+        dll.insertFirst(2);
+        dll.insertFirst(1);
+
+        dll.insertLast(6);
+        dll.insertLast(7);
+        dll.insertLast(8);
+        dll.insertLast(9);
+        dll.insertLast(10);
+
+        dll.deleteFirst();
+        dll.deleteLast();
 
         System.out.println("DISPLAYING FORWARD");
         dll.displayForward();
@@ -117,7 +127,6 @@ public class DoublyLinkedList{
         System.out.println("DISPLAYING BACKWARD");
         dll.displayBackward();
     }
-
 }
 
 
