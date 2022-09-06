@@ -366,5 +366,7 @@ public class SinglyLinkedList{
         System.out.println();
         System.out.println("NTH NODE FROM THE END OF THE LINKED LIST IS "+sll.getNthNodeFromEnd(2).data);
 
+        System.out.println();
+        System.out.println("IS THE LINKED LIST PALINDROME ? "+sll.checkPalindrome(head));
     }
 }
