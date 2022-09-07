@@ -63,7 +63,7 @@ public class CircularLinkedList {
         length++;
     }
 
-    public void removeFirst(){
+    public void removeFirst() throws Exception{
         if(isEmpty())
             throw new NoSuchElementException();
         ListNode temp = last.next;
@@ -71,6 +71,21 @@ public class CircularLinkedList {
             last = null;
         else
             last.next = temp.next;
+        temp.next = null;
+        length--;
+    }
+    
+    public void removeLast() throws Exception{
+        if(isEmpty())
+            throw new NoSuchElementException();
+        ListNode temp = last.next;
+        ListNode previous = null;
+        while(temp != last){
+            previous = temp;
+            temp = temp.next;
+        }
+        previous.next = last.next;
+        last = previous;
         temp.next = null;
         length--;
     }
@@ -98,6 +113,9 @@ public class CircularLinkedList {
 
         cll.insertFirst(5);
         cll.insertLast(55);
+        
+        //cll.removeFirst();
+        //cll.removeLast();
         cll.traverseCircularLinkedList();
     }
 }
