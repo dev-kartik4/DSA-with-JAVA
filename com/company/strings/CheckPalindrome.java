@@ -16,7 +16,7 @@ public class CheckPalindrome {
     }
 
     public static void main(String args[]){
-        boolean result = isPalindrome("SIR");
+        boolean result = isPalindrome("MADAM");
         System.out.println("THE GIVEN WORD IS PALINDROME - "+result);
     }
 }
