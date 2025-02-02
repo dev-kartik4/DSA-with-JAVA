@@ -4,6 +4,14 @@ import java.util.Scanner;
 
 public class StarPatterns {
 
+    /*
+        *
+        **
+        ***
+        ****
+        *****
+    */
+
     static void printLeftTriangleNumberOfStars(int N){
 
         for(int i=0;i<N;i++){
@@ -13,6 +21,15 @@ public class StarPatterns {
             System.out.println();
         }
     }
+
+    /*
+    1
+    12
+    123
+    1234
+    12345
+    
+    */
 
     static void printLeftTriangleInNumbers(int N){
 
@@ -24,6 +41,14 @@ public class StarPatterns {
         }
     }
 
+    /*
+    1
+    22
+    333
+    4444
+    55555
+    */
+
     static void printRowNumbersInLeftTriangle(int N){
 
         for(int i=1;i<=N;i++){
@@ -34,6 +59,14 @@ public class StarPatterns {
         }
     }
 
+
+    /*
+    *****
+    ****
+    ***
+    **
+    *
+    */
     static void printReverseLeftTriangleOfStars(int N){
 
         for(int i=N-1;i>=0;i--){
@@ -44,6 +77,14 @@ public class StarPatterns {
         }
     }
 
+    /*
+    12345
+    1234
+    123
+    12
+    1
+    */
+
     static void printReverseLeftTriangleOfNumbers(int N){
 
         for(int i=1;i<=N;i++){
@@ -53,6 +94,14 @@ public class StarPatterns {
             System.out.println();
         }
     }
+
+    /*
+         *    
+        ***   
+       *****  
+      ******* 
+     *********
+    */
 
     static void printPascalTriangle(int N){
 
@@ -73,6 +122,14 @@ public class StarPatterns {
         }
     }
 
+    /*
+        *********
+         ******* 
+          *****  
+           ***   
+            *
+    */
+    
     static void printReversePascalTriangle(int N){
 
         for(int i=0;i<N;i++){
@@ -92,11 +149,38 @@ public class StarPatterns {
         }
     }
 
+    /*
+        *    
+       ***   
+      *****  
+     ******* 
+    *********
+    *********
+     ******* 
+      *****  
+       ***   
+        *
+    */
+    
+
     static void printCombinationOfPascalTriangle(int N){
 
         printPascalTriangle(N);
         printReversePascalTriangle(N);
     }
+
+    /*
+        *
+        **
+        ***
+        ****
+        *****
+        ****
+        ***
+        **
+        *
+    
+    */
 
     static void printLeftAndReverseLeftTriangle(int N){
         for(int i=1;i<=2*N-1;i++){
@@ -110,6 +194,15 @@ public class StarPatterns {
             System.out.println();
         }
     }
+
+
+    /*  
+        1
+        01
+        101
+        0101
+        10101
+    */
 
     static void printZerosAndOnesInLeftTriangle(int N){
 
@@ -128,6 +221,15 @@ public class StarPatterns {
         }
     }
 
+    /*  
+        1        1
+        12      21
+        123    321
+        1234  4321
+        1234554321
+    
+    */
+
     static void printLeftAndRightTriangleOfNumbers(int N){
         int space = 2 * (N-1);
         for(int i=1;i<=N;i++){
@@ -145,6 +247,15 @@ public class StarPatterns {
         }
     }
 
+    /*
+        1  
+        2 3  
+        4 5 6  
+        7 8 9 10  
+        11 12 13 14 15
+    
+    */
+
     static void printContinuousNumbersInPattern(int N){
         int num = 1;
         for(int i=1;i<=N;i++){
@@ -156,6 +267,15 @@ public class StarPatterns {
         }
     }
 
+    /* 
+        A
+        AB
+        ABC
+        ABCD
+        ABCDE
+    
+    */
+
     static void printLeftTriangleOfAlphabets(int N){
 
         for(int i=0;i<N;i++){
@@ -165,6 +285,14 @@ public class StarPatterns {
             System.out.println();
         }
     }
+
+    /*
+        ABCDE
+        ABCD
+        ABC
+        AB
+        A
+    */
 
     static void printReverseLeftTriangleOfAlphabets(int N){
 
@@ -176,6 +304,15 @@ public class StarPatterns {
         }
     }
 
+    /*
+        A 
+        B B 
+        C C C 
+        D D D D 
+        E E E E E
+    
+    */
+
     static void printLeftTriangleRepeatedAlphabetsPerRowNum(int N){
 
         for(int i=0;i<N;i++){
@@ -186,6 +323,14 @@ public class StarPatterns {
             System.out.println();
         }
     }
+
+    /*
+        A    
+       ABA   
+      ABCBA  
+     ABCDCBA 
+    ABCDEDCBA
+    */
 
     static void printPascalTriangleOfAlphabets(int N){
 
@@ -211,6 +356,16 @@ public class StarPatterns {
         }
     }
 
+
+    /*
+        E  
+        D E  
+        C D E  
+        B C D E  
+        A B C D E
+    
+    */
+
     static void printReverseASCIIOfAlphabetsPascalTriangle(int N){
 
         for(int i=0;i<N;i++){
@@ -220,6 +375,20 @@ public class StarPatterns {
             System.out.println(" ");
         }
     }
+
+    /*
+        ***** *****
+        ****   ****
+        ***     ***
+        **       **
+        *         *
+        *          *
+        **        **
+        ***      ***
+        ****    ****
+        *****  *****
+    
+    */
 
     static void printPattern19(int N){
         int space = 0;
@@ -256,6 +425,18 @@ public class StarPatterns {
         }
     }
 
+    /*
+        *        *
+        **      **
+        ***    ***
+        ****  ****
+        **********
+        ****  ****
+        ***    ***
+        **      **
+        *        *
+    */
+
     static void printPattern20(int N){
         int space = 2*N-2;
         for(int i=1;i<=2*N-1;i++){
@@ -280,6 +461,15 @@ public class StarPatterns {
         }
     }
 
+    /*
+        *****
+        *   *
+        *   *
+        *   *
+        *****
+    
+    */
+
     static void printPattern21(int N){
 
         for(int i=0;i<N;i++){
@@ -293,6 +483,18 @@ public class StarPatterns {
             System.out.println();
         }
     }
+
+    /*
+        555555555
+        544444445
+        543333345
+        543222345
+        543212345
+        543222345
+        543333345
+        544444445
+        555555555
+    */
 
     static void printPattern22(int N){
         for(int i=0;i<2*N-1;i++){
